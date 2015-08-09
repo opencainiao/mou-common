@@ -23,7 +23,7 @@ public class FileUtil {
 	}
 
 	/****
-	 * 创建制定目录
+	 * 创建指定目录
 	 * 
 	 * @param destDirName
 	 * @return
@@ -45,6 +45,7 @@ public class FileUtil {
 	}
 
 	/****
+	 * 创建文件（如果存在，则删除）
 	 * 
 	 * @param file
 	 * @throws IOException
@@ -88,7 +89,7 @@ public class FileUtil {
 	 *            要删除的目录或文件
 	 * @return 删除成功返回 true，否则返回 false。
 	 */
-	public static boolean DeleteFolder(String sPath) {
+	public static boolean deleteFolderOrFile(String sPath) {
 		boolean flag = false;
 		File file = new File(sPath);
 		// 判断目录或文件是否存在
@@ -184,9 +185,5 @@ public class FileUtil {
 	public static String getAbsolutePathParent(String file) {
 		File f = new File(file);
 		return f.getParent();
-	}
-	
-	public static void main(String[] args) {
-		
 	}
 }
