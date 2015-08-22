@@ -38,17 +38,6 @@ public class JsonUtil {
 	}
 
 	/****
-	 * 取格式化的对象的json字符串
-	 * 
-	 * @param o
-	 * @return
-	 */
-	public static String getFormatJsonStr(Object o) {
-		String rtnStr = toJsonStr(o);
-		return rtnStr.replaceAll(",", "\n").replaceAll("},", "\n");
-	}
-
-	/****
 	 * 获取格式化的json字符串表示
 	 * 
 	 * @param o
